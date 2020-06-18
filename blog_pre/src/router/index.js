@@ -14,6 +14,26 @@ Vue.use(VueRouter)
     path: '/home',
     name: 'Home',
     component: () => import('../views/Home.vue')
+  },
+  {
+    path: '/article',
+    name: 'Article',
+    component: () => import('../views/Article.vue')
+  },
+  {
+    path: '/contact',
+    name: 'Contact',
+    component: () => import('../views/Contact.vue')
+  },
+  {
+    path: '/message',
+    name: 'Message',
+    component: () => import('../views/Message.vue')
+  },
+  {
+    path: '/photo',
+    name: 'Photo',
+    component: () => import('../views/Photo.vue')
   }
 ]
 

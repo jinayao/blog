@@ -1,17 +1,8 @@
 <template>
   <div class="nav">
     <ul>
-      <li>
-        <a href="#">首页</a>
-      </li>
-      <li>
-        <a href="#">不知道</a>
-      </li>
-      <li>
-        <a href="#">不知道</a>
-      </li>
-      <li>
-        <a href="#">不知道</a>
+      <li v-for="(item,index) in menu" :key="index">
+        <router-link :to="item.path">{{item.name}}</router-link>
       </li>
     </ul>
   </div>
@@ -19,7 +10,8 @@
 
 <script>
 export default {
-  name: "nav"
+  name: "nav",
+  props:["menu"]
 };
 </script>
 
@@ -29,7 +21,7 @@ ul{
   height: 80px;
   display: flex;
   margin: 10px auto;
-  justify-content: flex-start;
+  justify-content: space-around;
   li{
     margin-right: 40px;
   }

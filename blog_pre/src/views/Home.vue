@@ -1,6 +1,6 @@
 <template>
   <div class="Home">
-    <HeaderNav></HeaderNav>
+    <HeaderNav :menu="menu"></HeaderNav>
   </div>
 </template>
 
@@ -8,6 +8,32 @@
 import HeaderNav  from "../components/HeaderNav/HeaderNav"
 export default {
   name: "Home",
+  data(){
+    return{
+      menu:[
+        {
+          name:"首页",
+          path:"/home"
+        },
+        {
+          name:"文章",
+          path:"/article"
+        },
+        {
+          name:"相册",
+          path:"/photo"
+        },
+        {
+          name:"留言",
+          path:"/message"
+        },
+        {
+          name:"联系我",
+          path:"/contact"
+        },
+      ]
+    }
+  },
   components: {
     HeaderNav
   }

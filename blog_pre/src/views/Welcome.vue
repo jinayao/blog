@@ -40,6 +40,9 @@ export default {
     user-select: none;
     a {
       pointer-events: auto;
+      &:hover{
+        color: red;
+      }
     }
     .content__title {
       font-size: 6vw;
