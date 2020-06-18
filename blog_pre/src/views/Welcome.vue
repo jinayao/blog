@@ -2,7 +2,7 @@
   <div class="Welcome">
     <div class="content__title-wrap">
       <div class="wrapper">
-        <h1 contenteditable data-heading="学习无止步，进步无止息">学习无止步，进步无止息</h1>
+        <h1 data-heading="学习无止步，进步无止息">学习无止步，进步无止息</h1>
       </div>
       <router-link to="/home" class="content__link">欢迎进入我的博客</router-link>
     </div>
@@ -21,7 +21,7 @@ export default {
   position: relative;
   width: 100vw;
   height: 100vh;
-  background: #000;
+  background: #444;
   align-items: center;
   .content__title-wrap {
     position: absolute;
@@ -129,4 +129,5 @@ export default {
             -2px -15px 11px #f80, 2px -25px 18px #f20;
         }
       }
+
 </style>

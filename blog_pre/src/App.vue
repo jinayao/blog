@@ -30,6 +30,10 @@ export default {
 </script>
 
 <style lang="less">
+body,html,#app{
+  width: 100%;
+  height: 100%;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -43,19 +47,23 @@ export default {
 .slide-enter-enter-active,
 .slide-enter-leave-active {
   will-change: transform;
-  transition: all 1s;
+  transition: all 0.5s;
   position: absolute;
 }
 .slide-enter-enter {
   opacity: 1;
+  transform: translate3d(0,-100%,0);
 }
 .slide-enter-leave-active {
+  transform: translate3d(0,100%,0);
   opacity: 0;
 }
 .slide-leave-enter {
-  opacity: 1;
+  transform: translate3d(0,100%,0);
+  opacity: 0;
 }
 .slide-leave-leave-active {
-  opacity: 0;
+  transform: translate3d(0,-100%,0);
+  opacity: 1;
 }
 </style>
