@@ -16,23 +16,30 @@ export default {
 </script>
 
 <style lang="less" scoped>
+.nav{
+  width: 100%;
+  background-color: rgba(0, 0, 0,.2);
+}
 ul{
   width: 800px;
-  height: 80px;
+  height: 60px;
   display: flex;
-  margin: 10px auto;
+  margin:auto;
   justify-content: space-around;
   li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin-right: 40px;
   }
 }
 li a {
     display: block;
-    font-size: 20px;
+    font-size: 16px;
     text-align: center;
     padding: 10px 15px;
     line-height: 25px;
-    color: #777;
+    color: #fff;
     text-decoration: none;
 }
  
@@ -41,7 +48,7 @@ li a:hover {
 }
 li a:before, li a:after {
     opacity: 0;
-    border-top: 1px solid #999;
+    border-top: 1px solid #fff;
     content: '';
     display: block;
     position: relative;

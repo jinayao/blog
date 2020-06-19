@@ -1,11 +1,10 @@
 <template>
   <div class="Home">
-    <HeaderNav :menu="menu"></HeaderNav>
+首页
   </div>
 </template>
 
 <script>
-import HeaderNav  from "../components/HeaderNav/HeaderNav"
 export default {
   name: "Home",
   data(){
@@ -35,7 +34,7 @@ export default {
     }
   },
   components: {
-    HeaderNav
+
   }
 };
 </script>
@@ -44,6 +43,5 @@ export default {
 .Home {
   width: 100%;
   height: 100%;
-  background: url("../assets/what-we-do-bg.png") no-repeat 50% 50%;
 }
 </style>
