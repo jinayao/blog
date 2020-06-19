@@ -46,7 +46,6 @@ body,html,#app{
   text-align: center;
   color: #2c3e50;
   font-size: 12px;
-  background-color:rgba(0,0,0,.5);
 }
 .slide-leave-enter-active,
 .slide-leave-leave-active,
@@ -136,7 +135,7 @@ body,html,#app{
           overflow: hidden;
           width: 100%;
           height: 50%;
-          color: #fbf7f4;
+          color: #fff;
           transform: translate(0.5vw, 0) skew(-13deg) scale(1, 1.2);
           z-index: 2;
           text-shadow: 2px -1px 6px rgba(0, 0, 0, 0.2);
@@ -151,7 +150,7 @@ body,html,#app{
           width: 100%;
           height: 100%;
           z-index: 1;
-          color: #d3cfcc;
+          color: #fff;
           transform: translate(0vw, 0) skew(13deg) scale(1, 0.8);
           clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0% 100%);
           text-shadow: 2px -1px 6px rgba(0, 0, 0, 0.3);

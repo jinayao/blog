@@ -1,6 +1,6 @@
 <template>
   <div class="Home">
-首页
+首页  
   </div>
 </template>
 
@@ -43,5 +43,6 @@ export default {
 .Home {
   width: 100%;
   height: 100%;
+  background-color: rgba(0,0,0,.3);
 }
 </style>
