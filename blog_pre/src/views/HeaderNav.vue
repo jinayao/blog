@@ -1,8 +1,8 @@
 <template>
   <div>
     <ul class="menu">
-      <router-link v-for="item in menu" :key="item.path" :to="item.path" tag="li" class="menu-cell">
-         <img class="menu-cell__image" :src="item.src">
+      <router-link v-for="item in menu" :key="item.path" to="item.path" tag="li" class="menu-cell">
+         <img class="menu-cell__image" src="../../../public/1.jpg">
         <div class="menu-cell__title">{{item.name}}</div>
       </router-link>
     </ul>
@@ -35,8 +35,8 @@ export default {
   transform: translateY(34.375px);
 }
 .menu-cell {
-  flex: 0 1 190px;
-  max-width: 190px;
+  flex: 0 1 200px;
+  max-width: 200px;
   height: 100.5px;
   margin: 50px 10.5px 20px;
   position: relative;
