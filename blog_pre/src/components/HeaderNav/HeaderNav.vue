@@ -46,6 +46,14 @@ export default {
   color: #fff;
   z-index: 1;
   cursor: pointer;
+  &:hover{
+    .menu-cell__title{
+      animation: changesize .5s linear;
+    }
+    .menu-cell__image{
+      animation: changeimage .5s linear;
+    }
+  }
 }
 .menu-cell::before {
   background: #ddd;
@@ -75,17 +83,17 @@ export default {
   margin: 0 12.5px;
 }
 .menu-cell__image {
+  width: 70px;
+  height: 70px;
+  margin-top: -10px;
+  margin-bottom: 15px;
   -o-object-fit: cover;
   object-fit: cover;
   -o-object-position: center;
   object-position: center;
   border-style: none;
 }
-.menu-cell__image {
-  width: 70px;
-  height: 70px;
-  margin-top: -10px;
-}
+
 .menu-cell__title {
   height: 40px;
   display: flex;
@@ -118,5 +126,27 @@ export default {
   );
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   z-index: -1;
+}
+@keyframes changesize{
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.5);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+@keyframes changeimage{
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.1);
+  }
+  100%{
+    transform: scale(1);
+  }
 }
 </style>
