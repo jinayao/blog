@@ -20,11 +20,11 @@ export default {
 
 <style lang="less" scoped>
 .Recommend {
-  width: 300px;
+  width: 280px;
   .box {
     position: fixed;
     top: 20px;
-    width: 300px;
+    width: 280px;
   }
 }
 </style>

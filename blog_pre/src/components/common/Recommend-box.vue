@@ -28,9 +28,10 @@ export default {
   height: 185px;
   padding: 20px;
   margin-bottom: 20px;
-  border: 1px solid black;
+  border: 1px solid #ddd;
   border-radius: 8px;
   text-align: left;
+  box-shadow: 1px 1px 1px rgb(133, 0, 0);
   .title {
     font-size: 22px;
     &::after {
@@ -55,7 +56,7 @@ export default {
   }
   .control {
     text-align: right;
-    &:hover {
+    span:hover {
       color: red;
       cursor: pointer;
       text-decoration: underline;
