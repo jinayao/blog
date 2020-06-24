@@ -1,6 +1,6 @@
 <template>
   <div class="Message">
-    相册
+    留言
   </div>
 </template>
 

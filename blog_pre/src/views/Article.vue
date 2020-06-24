@@ -1,14 +1,20 @@
 <template>
   <div class="Article">
-    留言
+    <div class="file">
+    <Project />
+    <Recommend />
+    </div>
   </div>
 </template>
 
 <script>
+import Project from '../components/Project/Project';
+import Recommend from '../components/Project/Recommend'
 export default {
   name: "Article",
   components: {
-    
+    Project,
+    Recommend
   }
 };
 </script>
@@ -16,7 +22,11 @@ export default {
 <style lang="less" scoped>
 .Article {
   width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,.3);
+  .file{
+  display: flex;
+  width: 1180px;
+  margin: auto;
+  justify-content: space-around;
+  }
 }
 </style>

@@ -47,7 +47,7 @@ body,html,#app{
 .slide-enter-enter-active,
 .slide-enter-leave-active {
   will-change: transform;
-  transition: all 0.5s;
+  transition: transform 0.5s;
   position: absolute;
 }
 .slide-enter-enter {
