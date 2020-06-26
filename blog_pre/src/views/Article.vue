@@ -2,7 +2,7 @@
   <div class="Article">
     <div class="file">
       <div class="projectBox">
-        <ProjectNav />
+        <ProjectNav :NavData="NavData"/>
         <Project />
       </div>
       <Recommend />
@@ -16,6 +16,36 @@ import Project from "../components/Project/Project";
 import Recommend from "../components/Project/Recommend";
 export default {
   name: "Article",
+  data(){
+    return{
+      NavData:[
+        {
+          name:"Javascript",
+          path:"",
+        },
+        {
+          name:"Vue",
+          path:"",
+        },
+        {
+          name:"React",
+          path:"",
+        },
+        {
+          name:"Node",
+          path:"",
+        },
+        {
+          name:"Mongo",
+          path:"",
+        },
+        {
+          name:"Three.js",
+          path:"",
+        },
+      ]
+    }
+  },
   components: {
     Project,
     Recommend,

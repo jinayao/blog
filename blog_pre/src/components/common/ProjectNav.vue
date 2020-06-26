@@ -5,7 +5,8 @@
                 文章列表
             </div>
             <ul>
-                <li>html</li>
+                <li v-for="(item,index) in NavData" :key="index">{{item.name}}</li>
+
             </ul>
         </div>
     </div>
@@ -14,7 +15,7 @@
 <script>
 export default {
     name:"ProjectNav",
-    
+    props: ["NavData"]
 }
 </script>
 
@@ -24,7 +25,7 @@ export default {
         margin-bottom: 30px;
         .nav{
             width: 100%;
-            padding-bottom:20px ;
+            padding-bottom:10px ;
             border-bottom: 4px solid red;
             text-align: left;
             .title{
@@ -34,14 +35,17 @@ export default {
                 text-indent: 2px;
             }
             ul{
-                li{
+                display: flex;
+                flex-wrap: wrap;
+                li{ 
                     width: 80px;
                     height: 30px;
+                    margin:0 10px 10px;
                     text-align: center;
                     line-height: 30px;
-                    font-size: 14px;
-                    color: #666;
-                    border: 1px solid #666;
+                    font-size: 12px;
+                    color: #999;
+                    border: 1px solid #999;
                     border-radius: 8px;
                     &:hover{
                         cursor: pointer;
