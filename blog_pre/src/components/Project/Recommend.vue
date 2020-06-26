@@ -1,9 +1,7 @@
 <template>
   <div class="Recommend">
     <div class="box">
-      <RecommendBox></RecommendBox>
-      <RecommendBox></RecommendBox>
-      <RecommendBox></RecommendBox>
+      <RecommendBox :recommendData="recommendData"></RecommendBox>
     </div>
   </div>
 </template>
@@ -12,6 +10,24 @@
 import RecommendBox from "../common/Recommend-box"
 export default {
   name: "Recommend",
+  data(){
+    return{
+      recommendData:[
+        {
+          title:"热门推荐",
+          data:[]
+        },
+        {
+          title:"最近更新",
+          data:[]
+        },
+        {
+          title:"近期留言",
+          data:[]
+        }
+      ]
+    }
+  },
   components: {
       RecommendBox
   }

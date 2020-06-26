@@ -33,7 +33,6 @@ export default {
 .Project {
   width: 800px;
   ul {
-    padding: 20px;
     li {
       display: flex;
       justify-content: space-around;
