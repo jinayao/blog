@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: "nav",
+  name: "HeaderNav",
   props: ["menu"]
 };
 </script>
