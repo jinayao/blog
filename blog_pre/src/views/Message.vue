@@ -74,7 +74,7 @@ export default {
 <style lang="less" scoped>
 .Message {
   width: 100%;
-  padding-bottom: 40px;
+  padding: 0 40px 40px;
   .msgBox {
     width: 1180px;
     margin: auto;

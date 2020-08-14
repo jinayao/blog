@@ -41,15 +41,12 @@ export default {
 };
 </script>
 
-<style lang="less">
+<style lang="less" lang='less'>
 .PhotoList {
   width: 100%;
   .listHeader{
       color: #999;
       margin-bottom: 20px;
-  }
-  .el-page-header__content{
-      color: #999 !important;
   }
   ul {
     display: flex;

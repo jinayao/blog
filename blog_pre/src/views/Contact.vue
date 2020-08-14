@@ -43,6 +43,7 @@ export default {
 .Contact {
   width: 100%;
   height: 100%;
+  padding: 0 40px;
   .content {
     width: 1180px;
     height: calc(100% - 40px);

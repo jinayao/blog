@@ -3,14 +3,11 @@
     <div class="recommend" v-for="(item,index) in recommendData" :key="index">
       <h3 class="title">{{item.title}}</h3>
       <ul>
-        <li>XXXXXXXXXXX</li>
-        <li>XXXXXXXXXXX</li>
-        <li>XXXXXXXXXXX</li>
-        <li>XXXXXXXXXXX</li>
-        <li>XXXXXXXXXXX</li>
+        <li v-for="(item,index) in item.data" :key="index">XXXXXXXXXXX</li>
       </ul>
+      <p v-show="item.data.length == 0">博主最近很懒，暂无更新</p>
       <div class="control">
-        <span>
+        <span @click="handleTo(item)">
           更多
           <i class="el-icon-d-arrow-right"></i>
         </span>
@@ -22,7 +19,12 @@
 <script>
 export default {
   name: "Recommend-box",
-  props: ["recommendData"]
+  props: ["recommendData"],
+  methods: {
+    handleTo(item) {
+      this.$router.push(item.path);
+    }
+  }
 };
 </script>
 

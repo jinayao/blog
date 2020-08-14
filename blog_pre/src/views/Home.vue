@@ -1,20 +1,40 @@
 <template>
   <div class="Home">
-    <navbar></navbar>
+首页  
   </div>
 </template>
 
 <script>
-import navbar from "../components/common/narBar";
 export default {
   name: "Home",
-  data() {
-    return {
-
-    };
+  data(){
+    return{
+      menu:[
+        {
+          name:"首页",
+          path:"/home"
+        },
+        {
+          name:"文章",
+          path:"/article"
+        },
+        {
+          name:"相册",
+          path:"/photo"
+        },
+        {
+          name:"留言",
+          path:"/message"
+        },
+        {
+          name:"联系我",
+          path:"/contact"
+        },
+      ]
+    }
   },
   components: {
-    navbar
+
   }
 };
 </script>
@@ -23,6 +43,6 @@ export default {
 .Home {
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0,0,0,.3);
 }
 </style>

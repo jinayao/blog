@@ -1,7 +1,7 @@
 <template>
   <div class="Project">
     <ul>
-      <li>
+      <li @click="handleSeclect">
         <div class="img">
           <img src="../../../public/4.png" alt width="100%" height="100%" />
         </div>
@@ -10,10 +10,10 @@
             <p>XXXXXX</p>
           </div>
           <div class="control">
-            <span>
+            <button @click.stop="handleSupport()" :disabled="btn">
               <i class="el-icon-thumb"></i>
-              点赞(22)
-            </span>
+              点赞({{count}})
+            </button>
             <span>发布时间 : 2020-06-05</span>
           </div>
         </div>
@@ -35,17 +35,27 @@ export default {
   name: "Project",
   data() {
     return {
-      currentPage: 1
+      currentPage: 1,
+      count:0,
+      btn:false
     };
   },
   components: {},
   methods: {
+    handleSupport(e){
+      this.count ++;
+      this.btn=true
+    },
     handleSizeChange(val) {
       console.log(`每页 ${val} 条`);
     },
     handleCurrentChange(val) {
       console.log(`当前页: ${val}`);
-    }
+    },
+    handleSeclect() {
+      console.log(234);
+      this.$emit("handleSeclect", false);
+    },
   }
 };
 </script>
@@ -89,13 +99,24 @@ export default {
         }
         .control {
           display: flex;
+          height: 22px;
+          line-height: 22px;
           justify-content: flex-end;
           color: #666;
-          span {
-            margin-left: 20px;
+          button {
+            border: none;
+            background: none;
+            user-select: none;
+            color: #666;
+            font-size: inherit;
+            cursor: pointer;
             &:hover {
               color: red;
             }
+          }
+          span{
+            margin-top: 1px;
+            margin-left: 20px;
           }
         }
       }

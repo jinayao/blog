@@ -15,14 +15,17 @@ export default {
       recommendData:[
         {
           title:"热门推荐",
+          path:'/article',
           data:[]
         },
         {
           title:"最近更新",
+          path:'/article',
           data:[]
         },
         {
           title:"近期留言",
+          path:'/message',
           data:[]
         }
       ]

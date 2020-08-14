@@ -17,9 +17,6 @@ export default {
   name: "ProjectNav",
   props: ["NavData","title"],
   computed: {
-    // typeList(){
-    //   return 
-    // }
   }
 };
 </script>

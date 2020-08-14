@@ -4,7 +4,8 @@
     <div class="file">
       <div class="projectBox">
         <ProjectNav :NavData="NavData" :title="title"/>
-        <Project />
+        <Project v-if="show" @handleSeclect='selectShow'/>
+        <ArticalInfo v-else @goBack="goBack"></ArticalInfo>
       </div>
       <Recommend />
     </div>
@@ -15,7 +16,8 @@
 import ProjectNav from "../components/common/ProjectNav";
 import Project from "../components/Project/Project";
 import Recommend from "../components/Project/Recommend";
-import navbar from "../components/common/narBar"
+import navbar from "../components/common/narBar";
+import ArticalInfo from "../components/Project/ArticalInfo"
 export default {
   name: "Article",
   data(){
@@ -46,14 +48,24 @@ export default {
           name:"Three.js",
           path:"",
         },
-      ]
+      ],
+      show:true
     }
   },
   components: {
     Project,
     Recommend,
     ProjectNav,
-    navbar
+    navbar,
+    ArticalInfo
+  },
+  methods: {
+    selectShow(){
+      this.show = false
+    },
+    goBack(){
+      this.show = true
+    }
   }
 };
 </script>
